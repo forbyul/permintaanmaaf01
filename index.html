@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maaf ya, Sayang 💖</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="kunci">
+
+  <!-- ============ MUSIK ============
+       Taruh lagu kalian di folder "musik" dengan nama lagu.mp3
+       (atau ganti nama file di bawah ini) -->
+  <audio id="musik" loop preload="auto">
+    <source src="musik/Nadhif Basalamah - bergema sampai selamanya.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- ============ DONGENG PEMBUKA (KOMIK) ============ -->
+
+  <!-- Pustaka gambar: karakter, latar, dan gradasi yang dipakai semua halaman -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="gMalam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d1a4d"/><stop offset="1" stop-color="#5a2f86"/></linearGradient>
+      <linearGradient id="gSubuh" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b2a6b"/><stop offset=".6" stop-color="#b86aa8"/><stop offset="1" stop-color="#ff9a8b"/></linearGradient>
+      <linearGradient id="gSubuh2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff9a9e"/><stop offset="1" stop-color="#ffe5b4"/></linearGradient>
+      <linearGradient id="gPagi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb3c6"/><stop offset="1" stop-color="#ffe9a8"/></linearGradient>
+      <linearGradient id="gCover" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd1e8"/><stop offset=".5" stop-color="#d9c7ff"/><stop offset="1" stop-color="#bff3ff"/></linearGradient>
+
+      <!-- Kapibara -->
+      <symbol id="kapi" viewBox="0 0 130 90">
+        <rect x="28" y="66" width="15" height="20" rx="7" fill="#9a6a42"/>
+        <rect x="52" y="68" width="15" height="18" rx="7" fill="#9a6a42"/>
+        <rect x="80" y="66" width="15" height="20" rx="7" fill="#9a6a42"/>
+        <ellipse cx="58" cy="50" rx="48" ry="28" fill="#b88458"/>
+        <ellipse cx="60" cy="62" rx="34" ry="12" fill="#cfa07a" opacity=".55"/>
+        <circle cx="86" cy="26" r="6" fill="#9a6a42"/>
+        <circle cx="86" cy="26" r="3" fill="#d99a8a"/>
+        <ellipse cx="98" cy="44" rx="22" ry="19" fill="#b88458"/>
+        <ellipse cx="114" cy="53" rx="14" ry="11" fill="#a06b45"/>
+        <ellipse cx="121" cy="47" rx="2.4" ry="3.2" fill="#3d2414"/>
+        <path d="M110 58 Q116 61 122 58" stroke="#3d2414" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+        <path d="M90 38 Q96 33 102 38" stroke="#3d2414" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+        <ellipse cx="106" cy="43" rx="5" ry="3" fill="#ff9ab0" opacity=".55"/>
+      </symbol>
+      <symbol id="mahkota" viewBox="0 0 30 20">
+        <path d="M1 19 L3 3 L10 11 L15 1 L20 11 L27 3 L29 19 Z" fill="#ffd54a" stroke="#d99a00" stroke-width="1.5" stroke-linejoin="round"/>
+        <circle cx="15" cy="14" r="2.2" fill="#ff6fa0"/>
+      </symbol>
+      <symbol id="kapi-mahkota" viewBox="0 0 130 90">
+        <use href="#kapi" width="130" height="90"/>
+        <use href="#mahkota" x="80" y="4" width="30" height="20" transform="rotate(-18 95 14)"/>
+      </symbol>
+      <symbol id="kapi-ratu" viewBox="0 0 130 90">
+        <use href="#kapi" width="130" height="90"/>
+        <path d="M20 46 Q48 16 78 34 L80 68 Q50 84 22 72 Z" fill="#ff8fb1" opacity=".95"/>
+        <path d="M22 72 Q50 84 80 68" stroke="#fff" stroke-width="4" stroke-dasharray="1 7" stroke-linecap="round" fill="none"/>
+        <use href="#mahkota" x="80" y="24" width="34" height="23" transform="rotate(-8 97 36)"/>
+      </symbol>
+
+      <!-- Putri Melati -->
+      <symbol id="putri-dasar" viewBox="0 0 80 130">
+        <path d="M16 40 Q14 8 40 8 Q66 8 64 40 L66 80 Q40 72 14 80 Z" fill="#6b3a24"/>
+        <path d="M40 60 L8 126 Q40 134 72 126 Z" fill="#ff8fb1"/>
+        <path d="M8 126 Q40 134 72 126" stroke="#fff" stroke-width="5" stroke-dasharray="1 8" stroke-linecap="round" fill="none"/>
+        <path d="M30 58 L50 58 L46 86 L34 86 Z" fill="#ff6fa0"/>
+        <ellipse cx="20" cy="82" rx="5" ry="12" fill="#ffe0c8" transform="rotate(12 20 82)"/>
+        <ellipse cx="60" cy="82" rx="5" ry="12" fill="#ffe0c8" transform="rotate(-12 60 82)"/>
+        <rect x="35" y="52" width="10" height="9" fill="#ffe0c8"/>
+        <circle cx="40" cy="38" r="22" fill="#ffe0c8"/>
+        <path d="M18 36 Q22 14 40 14 Q58 14 62 36 Q50 24 40 26 Q30 24 18 36Z" fill="#6b3a24"/>
+        <path d="M28 14 L29 4 L34 9 L40 1 L46 9 L51 4 L52 14 Z" fill="#ffd54a" stroke="#d99a00" stroke-width="1" transform="rotate(14 40 10)"/>
+      </symbol>
+      <symbol id="putri-manyun" viewBox="0 0 80 130">
+        <use href="#putri-dasar" width="80" height="130"/>
+        <path d="M27 31 L35 34 M53 31 L45 34" stroke="#4a2a18" stroke-width="2.2" stroke-linecap="round"/>
+        <circle cx="32" cy="40" r="2.4" fill="#3a2214"/><circle cx="48" cy="40" r="2.4" fill="#3a2214"/>
+        <circle cx="24" cy="47" r="6" fill="#ff9ab0" opacity=".75"/><circle cx="56" cy="47" r="6" fill="#ff9ab0" opacity=".75"/>
+        <path d="M35 52 Q40 47 45 52" stroke="#c4385f" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="putri-kaget" viewBox="0 0 80 130">
+        <use href="#putri-dasar" width="80" height="130"/>
+        <path d="M27 29 Q32 24 37 29 M43 29 Q48 24 53 29" stroke="#4a2a18" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <circle cx="32" cy="39" r="5" fill="#fff" stroke="#3a2214" stroke-width="1.5"/><circle cx="48" cy="39" r="5" fill="#fff" stroke="#3a2214" stroke-width="1.5"/>
+        <circle cx="32" cy="39" r="2" fill="#3a2214"/><circle cx="48" cy="39" r="2" fill="#3a2214"/>
+        <circle cx="25" cy="47" r="4" fill="#ff9ab0" opacity=".6"/><circle cx="55" cy="47" r="4" fill="#ff9ab0" opacity=".6"/>
+        <ellipse cx="40" cy="53" rx="3.5" ry="5" fill="#c4385f"/>
+      </symbol>
+      <symbol id="putri-senyum" viewBox="0 0 80 130">
+        <use href="#putri-dasar" width="80" height="130"/>
+        <path d="M28 40 Q32 35 36 40 M44 40 Q48 35 52 40" stroke="#3a2214" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <circle cx="25" cy="47" r="4.5" fill="#ff9ab0" opacity=".7"/><circle cx="55" cy="47" r="4.5" fill="#ff9ab0" opacity=".7"/>
+        <path d="M33 48 Q40 59 47 48 Z" fill="#c4385f"/>
+      </symbol>
+
+      <!-- Pangeran Arka -->
+      <symbol id="pangeran-dasar" viewBox="0 0 80 130">
+        <rect x="26" y="96" width="12" height="30" rx="5" fill="#3b3f7a"/>
+        <rect x="42" y="96" width="12" height="30" rx="5" fill="#3b3f7a"/>
+        <rect x="23" y="122" width="17" height="7" rx="3.5" fill="#2a2a44"/>
+        <rect x="40" y="122" width="17" height="7" rx="3.5" fill="#2a2a44"/>
+        <rect x="18" y="56" width="44" height="46" rx="14" fill="#6c8cff"/>
+        <circle cx="40" cy="70" r="2.5" fill="#ffd54a"/><circle cx="40" cy="82" r="2.5" fill="#ffd54a"/><circle cx="40" cy="94" r="2.5" fill="#ffd54a"/>
+        <rect x="8" y="60" width="12" height="32" rx="6" fill="#6c8cff" transform="rotate(8 14 60)"/>
+        <rect x="60" y="60" width="12" height="32" rx="6" fill="#6c8cff" transform="rotate(-8 66 60)"/>
+        <circle cx="11" cy="94" r="5" fill="#ffd9b8"/><circle cx="69" cy="94" r="5" fill="#ffd9b8"/>
+        <rect x="35" y="50" width="10" height="10" fill="#ffd9b8"/>
+        <circle cx="40" cy="34" r="21" fill="#ffd9b8"/>
+        <path d="M17 34 Q14 8 40 8 Q66 8 63 34 Q58 20 52 22 Q48 14 40 20 Q32 14 28 22 Q22 20 17 34 Z" fill="#2d2a4a"/>
+        <path d="M36 10 L32 0 L43 8 Z" fill="#2d2a4a"/>
+        <path d="M24 17 Q40 9 56 17" stroke="#ffd54a" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <circle cx="26" cy="43" r="4" fill="#ff9ab0" opacity=".5"/><circle cx="54" cy="43" r="4" fill="#ff9ab0" opacity=".5"/>
+      </symbol>
+      <symbol id="pangeran-ngos" viewBox="0 0 80 130">
+        <use href="#pangeran-dasar" width="80" height="130"/>
+        <path d="M28 31 L35 28 M52 31 L45 28" stroke="#2d2a4a" stroke-width="2.2" stroke-linecap="round"/>
+        <circle cx="33" cy="38" r="2.3" fill="#2a1a2a"/><circle cx="47" cy="38" r="2.3" fill="#2a1a2a"/>
+        <ellipse cx="40" cy="50" rx="5" ry="4" fill="#b0304e"/>
+      </symbol>
+      <symbol id="pangeran-nangis" viewBox="0 0 80 130">
+        <use href="#pangeran-dasar" width="80" height="130"/>
+        <path d="M28 30 L35 27 M52 30 L45 27" stroke="#2d2a4a" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M29 37 Q33 41 37 37 M43 37 Q47 41 51 37" stroke="#2a1a2a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <path d="M31 42 Q29 50 31 55 M49 42 Q51 50 49 55" stroke="#6ec6ff" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M34 53 Q37 49 40 53 Q43 57 46 53" stroke="#b0304e" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="pangeran-tawa" viewBox="0 0 80 130">
+        <use href="#pangeran-dasar" width="80" height="130"/>
+        <path d="M29 38 Q33 33 37 38 M43 38 Q47 33 51 38" stroke="#2a1a2a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <path d="M33 47 Q40 58 47 47 Z" fill="#b0304e"/>
+      </symbol>
+
+      <!-- Nenek Penyihir Bubu -->
+      <symbol id="penyihir-dasar" viewBox="0 -12 100 142">
+        <path d="M50 62 L14 126 Q50 136 86 126 Z" fill="#7b4fd1"/>
+        <path d="M14 126 Q50 136 86 126" stroke="#ffd54a" stroke-width="3" stroke-dasharray="1 7" stroke-linecap="round" fill="none"/>
+        <ellipse cx="24" cy="88" rx="7" ry="15" fill="#7b4fd1" transform="rotate(20 24 88)"/>
+        <ellipse cx="76" cy="88" rx="7" ry="15" fill="#7b4fd1" transform="rotate(-20 76 88)"/>
+        <ellipse cx="30" cy="62" rx="8" ry="14" fill="#f4f0ff"/>
+        <ellipse cx="70" cy="62" rx="8" ry="14" fill="#f4f0ff"/>
+        <circle cx="50" cy="52" r="19" fill="#f2d3b5"/>
+        <ellipse cx="50" cy="58" rx="4.5" ry="6" fill="#e5b794"/>
+        <circle cx="42" cy="48" r="7" fill="#fff" fill-opacity=".5" stroke="#d99a00" stroke-width="2"/>
+        <circle cx="58" cy="48" r="7" fill="#fff" fill-opacity=".5" stroke="#d99a00" stroke-width="2"/>
+        <path d="M49 48 H51" stroke="#d99a00" stroke-width="2"/>
+        <g transform="rotate(-16 50 34)">
+          <path d="M20 38 L52 -6 L80 38 Z" fill="#5b34b0"/>
+          <rect x="14" y="34" width="72" height="9" rx="4.5" fill="#4a2a96"/>
+          <rect x="36" y="30" width="28" height="5" fill="#ffd54a"/>
+          <circle cx="52" cy="14" r="3" fill="#ffd54a"/>
+        </g>
+      </symbol>
+      <symbol id="penyihir" viewBox="0 -12 100 142">
+        <use href="#penyihir-dasar" x="0" y="-12" width="100" height="142"/>
+        <circle cx="42" cy="48" r="1.8" fill="#3a2214"/><circle cx="58" cy="48" r="1.8" fill="#3a2214"/>
+        <path d="M43 64 Q51 70 58 62" stroke="#a0453a" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="penyihir-malu" viewBox="0 -12 100 142">
+        <use href="#penyihir-dasar" x="0" y="-12" width="100" height="142"/>
+        <circle cx="42" cy="49" r="1.8" fill="#3a2214"/><circle cx="58" cy="49" r="1.8" fill="#3a2214"/>
+        <ellipse cx="36" cy="58" rx="5" ry="3" fill="#ff7a9a" opacity=".6"/><ellipse cx="64" cy="58" rx="5" ry="3" fill="#ff7a9a" opacity=".6"/>
+        <path d="M45 65 Q48 62 50 65 Q52 68 55 65" stroke="#a0453a" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="tongkat" viewBox="0 0 30 130">
+        <line x1="15" y1="26" x2="15" y2="128" stroke="#8a5a2b" stroke-width="5" stroke-linecap="round"/>
+        <polygon points="15,2 18.5,11.2 28.3,11.7 20.7,17.9 23.2,27.3 15,22 6.8,27.3 9.3,17.9 1.7,11.7 11.5,11.2" fill="#ffd54a" stroke="#d99a00" stroke-width="1.5" stroke-linejoin="round"/>
+      </symbol>
+
+      <!-- Latar -->
+      <g id="latar-malam">
+        <rect width="400" height="260" fill="url(#gMalam)"/>
+        <circle cx="342" cy="46" r="21" fill="#fff6c8"/>
+        <circle cx="335" cy="40" r="4" fill="#f1e3a0"/><circle cx="348" cy="52" r="3" fill="#f1e3a0"/>
+        <g fill="#fff">
+          <circle cx="30" cy="28" r="1.8"/><circle cx="92" cy="72" r="1.4"/><circle cx="150" cy="22" r="1.8"/>
+          <circle cx="212" cy="66" r="1.3"/><circle cx="296" cy="22" r="1.6"/><circle cx="384" cy="96" r="1.5"/>
+          <circle cx="60" cy="110" r="1.3"/><circle cx="250" cy="100" r="1.2"/>
+        </g>
+      </g>
+      <g id="balkon">
+        <rect y="205" width="400" height="55" fill="#6d4fa8"/>
+        <path d="M0 225 H400 M0 245 H400" stroke="#5a3f94" stroke-width="2"/>
+        <rect y="168" width="400" height="7" rx="3" fill="#cdbbff"/>
+        <g fill="#b9a2f5">
+          <rect x="14" y="175" width="7" height="30"/><rect x="54" y="175" width="7" height="30"/><rect x="94" y="175" width="7" height="30"/>
+          <rect x="134" y="175" width="7" height="30"/><rect x="174" y="175" width="7" height="30"/><rect x="214" y="175" width="7" height="30"/>
+          <rect x="254" y="175" width="7" height="30"/><rect x="294" y="175" width="7" height="30"/><rect x="334" y="175" width="7" height="30"/>
+          <rect x="374" y="175" width="7" height="30"/>
+        </g>
+        <rect y="203" width="400" height="5" fill="#cdbbff"/>
+      </g>
+    </defs>
+  </svg>
+
+  <section id="cerita" class="cerita">
+    <button class="lewati" id="btnLewati">Lewati cerita ⏭</button>
+
+    <div class="buku">
+      <div class="lembar" id="lembar">
+
+        <!-- SAMPUL -->
+        <article class="halaman aktif sampul">
+          <div class="panel">
+            <svg viewBox="0 0 400 260" role="img" aria-label="Kapibara bermahkota">
+              <rect width="400" height="260" fill="url(#gCover)"/>
+              <g font-size="22">
+                <text x="40" y="60">💖</text><text x="330" y="50">✨</text><text x="60" y="200">🌸</text>
+                <text x="330" y="210">🍓</text><text x="190" y="40">⭐</text><text x="355" y="130">💗</text><text x="20" y="130">🦋</text>
+              </g>
+              <ellipse cx="200" cy="222" rx="90" ry="12" fill="#000" opacity=".12"/>
+              <use href="#kapi-mahkota" x="105" y="84" width="190" height="131"/>
+              <text x="250" y="206" font-size="34">🍉</text>
+              <text x="198" y="92" font-size="26">🐦</text>
+            </svg>
+          </div>
+          <h1 class="judul-komik">Putri Melati<br>&amp; Kapibara Tengah Malam</h1>
+          <p class="narasi">Sebuah cerita bergambar untuk <b class="nama-dia">Sayang</b> 💖<br>Nyalakan suaranya, lalu geser halamannya ya 🎧</p>
+          <button class="tombol" id="btnMulai">Mulai Baca 📖</button>
+        </article>
+
+        <!-- HALAMAN 1 -->
+        <article class="halaman">
+          <div class="kop"><span class="no">Halaman 1</span><h2>Putri yang Gelisah</h2></div>
+          <div class="panel">
+            <svg viewBox="0 0 400 260" role="img" aria-label="Putri Melati cemberut di balkon, kursi di sebelahnya kosong">
+              <use href="#latar-malam"/>
+              <!-- gerbang jauh -->
+              <path d="M300 168 V134 A18 18 0 0 1 336 134 V168 Z" fill="#2b1f55"/>
+              <path d="M318 168 L292 168 L344 168 Z" fill="#6a5ba8"/>
+              <circle cx="296" cy="124" r="3" fill="#ffd54a"/><circle cx="340" cy="124" r="3" fill="#ffd54a"/>
+              <!-- jam dinding -->
+              <circle cx="262" cy="52" r="24" fill="#fff6d6" stroke="#b07a2a" stroke-width="3"/>
+              <path d="M262 32 V36 M262 68 V72 M242 52 H246 M278 52 H282" stroke="#b07a2a" stroke-width="2"/>
+              <line x1="262" y1="52" x2="262" y2="38" stroke="#5b3a63" stroke-width="3" stroke-linecap="round"/>
+              <line x1="262" y1="52" x2="262" y2="35" stroke="#5b3a63" stroke-width="2" stroke-linecap="round"/>
+              <use href="#balkon"/>
+              <!-- kursi kosong -->
+              <rect x="282" y="150" width="8" height="58" rx="3" fill="#8a5fb8"/>
+              <rect x="276" y="200" width="48" height="8" rx="3" fill="#8a5fb8"/>
+              <rect x="280" y="208" width="6" height="32" fill="#8a5fb8"/><rect x="314" y="208" width="6" height="32" fill="#8a5fb8"/>
+              <!-- putri -->
+              <use href="#putri-manyun" x="62" y="98" width="88" height="143"/>
+              <text x="140" y="112" font-size="22">💢</text>
+              <!-- meja -->
+              <rect x="162" y="196" width="104" height="8" rx="3" fill="#a87b4f"/>
+              <rect x="208" y="204" width="12" height="36" fill="#8a6240"/>
+              <text x="170" y="195" font-size="26">🍰</text>
+              <text x="210" y="195" font-size="24">☕</text>
+              <!-- lilin hampir habis -->
+              <rect x="244" y="184" width="9" height="12" rx="2" fill="#fff1d6"/>
+              <ellipse cx="248.5" cy="179" rx="3" ry="5" fill="#ffb100"/>
+              <path d="M244 190 q-3 4 0 6" stroke="#fff1d6" stroke-width="2" fill="none"/>
+            </svg>
+            <div class="gelembung kiri">Katanya jam 7... ini sudah tengah malam! 😤</div>
+          </div>
+          <p class="narasi">Malam hari di istana. Putri Melati duduk di balkon sambil menatap jalan gerbang. Di meja ada kue dan teh yang sudah dingin. Pangeran Arka berjanji akan datang makan malam, tapi jam dinding sudah menunjukkan tengah malam dan dia belum juga muncul. Putri menggembungkan pipi, cemberut.</p>
+        </article>
+
+        <!-- HALAMAN 2 -->
+        <article class="halaman">
+          <div class="kop"><span class="no">Halaman 2</span><h2>Penyihir Iseng Datang</h2></div>
+          <div class="panel">
+            <svg viewBox="0 0 400 260" role="img" aria-label="Nenek Penyihir Bubu turun dari sapu yang oleng di depan putri yang kaget">
+              <use href="#latar-malam"/>
+              <use href="#balkon"/>
+              <use href="#putri-kaget" x="30" y="100" width="86" height="140"/>
+              <!-- asap ungu -->
+              <g fill="#b98cff" opacity=".9">
+                <circle cx="250" cy="170" r="40"/><circle cx="295" cy="160" r="30"/><circle cx="275" cy="195" r="34"/><circle cx="228" cy="196" r="26"/>
+              </g>
+              <g fill="#d9c3ff" opacity=".8"><circle cx="255" cy="168" r="24"/><circle cx="290" cy="170" r="18"/><circle cx="240" cy="195" r="16"/></g>
+              <!-- sapu oleng -->
+              <g transform="rotate(-9 250 205)">
+                <rect x="186" y="203" width="118" height="6" rx="3" fill="#8a5a2b"/>
+                <path d="M188 198 L162 192 L158 206 L162 220 L188 214Z" fill="#e6b84a"/>
+                <use href="#penyihir" x="212" y="92" width="78" height="111"/>
+              </g>
+              <use href="#tongkat" x="296" y="88" width="30" height="126" transform="rotate(14 311 150)"/>
+              <g font-size="20"><text x="326" y="100">✨</text><text x="340" y="132">⭐</text><text x="304" y="82">✨</text></g>
+            </svg>
+            <div class="gelembung kiri">Aku tidak butuh sihir, aku butuh pangeran!</div>
+            <div class="gelembung kanan">Ups, kepleset! 🌟</div>
+          </div>
+          <p class="narasi">Tiba-tiba muncul asap ungu. Nenek Penyihir Bubu turun dari sapu terbangnya yang oleng. “Kamu kok cemberut begitu? Sini, Nenek bikin kamu santai!” Putri menjawab ketus, “Aku tidak butuh sihir, aku butuh pangeran!” Penyihir yang tersinggung mengayunkan tongkatnya sambil berkata, “Ups, kepleset!”</p>
+        </article>
+
+        <!-- HALAMAN 3 -->
+        <article class="halaman">
+          <div class="kop"><span class="no">Halaman 3</span><h2>Puff! Jadi Kapibara</h2></div>
+          <div class="panel">
+            <svg viewBox="0 0 400 260" role="img" aria-label="Putri berubah menjadi kapibara bermahkota miring dan bergaun kebesaran">
+              <use href="#latar-malam"/>
+              <use href="#balkon"/>
+              <g transform="translate(245 172)">
+                <rect x="-92" y="-92" width="184" height="184" fill="#ffe56b" opacity=".95"/>
+                <rect x="-92" y="-92" width="184" height="184" fill="#ffe56b" opacity=".95" transform="rotate(45)"/>
+                <rect x="-80" y="-80" width="160" height="160" fill="#ff9ec4" transform="rotate(22.5)"/>
+                <rect x="-80" y="-80" width="160" height="160" fill="#ff9ec4" transform="rotate(67.5)"/>
+                <circle r="62" fill="#fff"/>
+              </g>
+              <text x="285" y="66" font-size="34" font-weight="700" fill="#fff" stroke="#8a2be2" stroke-width="6" paint-order="stroke" text-anchor="middle" transform="rotate(-6 285 66)">POOF!</text>
+              <use href="#kapi-ratu" x="140" y="106" width="210" height="145"/>
+              <use href="#penyihir-malu" x="8" y="116" width="82" height="116"/>
+              <text x="92" y="136" font-size="20">💦</text>
+              <g font-size="20"><text x="120" y="108">✨</text><text x="360" y="100">✨</text><text x="352" y="236">⭐</text><text x="150" y="240">✨</text></g>
+            </svg>
+            <div class="gelembung kiri">Eh, maksudku jadi tenang!</div>
+          </div>
+          <p class="narasi">Cahaya berkilau, lalu POOF! Putri berubah menjadi kapibara yang bulat, berbulu cokelat, berhidung besar, dan berwajah tenang. Mahkotanya melorot menutupi mata. Penyihir menepuk jidat, “Eh, maksudku jadi tenang, bukan jadi kapibara!” Tapi sihirnya tidak bisa dibatalkan sampai pagi.</p>
+        </article>
+
+        <!-- HALAMAN 4 -->
+        <article class="halaman">
+          <div class="kop"><span class="no">Halaman 4</span><h2>Ternyata Enak Jadi Kapibara</h2></div>
+          <div class="panel">
+            <svg viewBox="0 0 400 260" role="img" aria-label="Kapibara makan semangka di dapur istana dengan burung dan kelinci di punggungnya">
+              <rect width="400" height="260" fill="#ffeccd"/>
+              <path d="M0 40 H400 M0 80 H400 M0 120 H400 M0 160 H400" stroke="#f6d8aa" stroke-width="2"/>
+              <rect x="300" y="26" width="72" height="62" rx="4" fill="#2a2560" stroke="#a0703a" stroke-width="5"/>
+              <path d="M336 26 V88 M300 57 H372" stroke="#a0703a" stroke-width="4"/>
+              <circle cx="318" cy="42" r="6" fill="#fff6c8"/>
+              <rect y="215" width="400" height="45" fill="#e8b87e"/>
+              <path d="M0 215 H400 M80 215 V260 M160 215 V260 M240 215 V260 M320 215 V260" stroke="#d9a468" stroke-width="2"/>
+              <rect x="0" y="188" width="92" height="40" rx="4" fill="#c88a4e"/>
+              <text x="6" y="190" font-size="54">🧑‍🍳</text>
+              <text x="62" y="186" font-size="30">🍉</text>
+              <text x="70" y="136" font-size="22">❗</text>
+              <ellipse cx="220" cy="248" rx="100" ry="9" fill="#000" opacity=".1"/>
+              <use href="#kapi-mahkota" x="125" y="120" width="190" height="131"/>
+              <text x="296" y="206" font-size="32">🍉</text>
+              <text x="248" y="132" font-size="26">🐦</text>
+              <text x="186" y="160" font-size="30">🐇</text>
+              <text x="226" y="154" font-size="22">🐦</text>
+            </svg>
+            <div class="gelembung kiri pikir">Kok kakiku jadi empat?</div>
+            <div class="gelembung kanan">KA-KAPIBARA?!</div>
+          </div>
+          <p class="narasi">Putri mencoba berjalan dengan empat kaki dan terpeleset lucu. Lalu dia mencium aroma semangka dari dapur. Pelayan terkejut, tapi si kapibara hanya menatap polos. Satu per satu, burung kecil dan kelinci istana naik ke punggungnya. Putri yang tadi marah mulai tenang.</p>
+        </article>
+
+        <!-- HALAMAN 5 -->
+        <article class="halaman">
+          <div class="kop"><span class="no">Halaman 5</span><h2>Kolam Tengah Malam</h2></div>
+          <div class="panel">
+            <svg viewBox="0 0 400 260" role="img" aria-label="Kapibara berendam bahagia di kolam bersama bebek, katak, dan jeruk yuzu">
+              <use href="#latar-malam"/>
+              <rect y="112" width="400" height="148" fill="#2d6a5a"/>
+              <ellipse cx="200" cy="192" rx="176" ry="62" fill="#5cc8e8" stroke="#bfeeff" stroke-width="4"/>
+              <ellipse cx="192" cy="188" rx="140" ry="44" fill="#7ad8f2" opacity=".6"/>
+              <!-- penyihir mengintip -->
+              <use href="#penyihir-malu" x="298" y="86" width="62" height="88"/>
+              <ellipse cx="335" cy="168" rx="56" ry="32" fill="#2f8f5a"/>
+              <ellipse cx="298" cy="174" rx="38" ry="26" fill="#3aa56a"/>
+              <ellipse cx="362" cy="176" rx="34" ry="24" fill="#2f8f5a"/>
+              <!-- kapibara -->
+              <use href="#kapi-mahkota" x="125" y="108" width="150" height="104"/>
+              <ellipse cx="200" cy="206" rx="72" ry="17" fill="#5cc8e8" opacity=".9"/>
+              <path d="M140 208 q10 -5 20 0 t20 0 M220 212 q10 -5 20 0 t20 0" stroke="#fff" stroke-width="2" fill="none" opacity=".7"/>
+              <text x="226" y="122" font-size="22">🐸</text>
+              <text x="86" y="196" font-size="24">🦆</text>
+              <text x="296" y="214" font-size="24">🦆</text>
+              <text x="120" y="232" font-size="24">🦆</text>
+              <text x="262" y="236" font-size="22">🦆</text>
+              <g font-size="17"><text x="168" y="226">🍊</text><text x="236" y="228">🍊</text><text x="62" y="214">🍊</text><text x="206" y="240">🍊</text></g>
+              <text x="258" y="212" font-size="14">✨</text>
+              <g stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".55">
+                <path d="M108 168 q-9 -12 0 -22 q9 -12 0 -22"/><path d="M282 160 q-9 -12 0 -22 q9 -12 0 -22"/><path d="M60 176 q-8 -10 0 -18"/>
+              </g>
+            </svg>
+            <div class="gelembung kiri">Ahh... hangat sekali 😌</div>
+            <div class="gelembung kanan">Maaf ya, Putri 🙈</div>
+          </div>
+          <p class="narasi">Putri kapibara berendam di kolam taman. Ah, hangat sekali! Bebek-bebek berenang mengelilinginya, dan seekor katak ikut duduk di kepalanya. Semua hewan berbaris menjadi “pasukan penghibur” untuk putri. Penyihir Bubu mengintip dari semak sambil merasa bersalah, lalu diam-diam mengirim jeruk yuzu hangat ke kolam.</p>
+        </article>
+
+        <!-- HALAMAN 6 -->
+        <article class="halaman">
+          <div class="kop"><span class="no">Halaman 6</span><h2>Pangeran Datang Terlambat</h2></div>
+          <div class="panel">
+            <svg viewBox="0 0 400 260" role="img" aria-label="Pangeran Arka terengah-engah membawa buket layu dan domba, kapibara menatap datar">
+              <rect width="400" height="260" fill="url(#gSubuh)"/>
+              <circle cx="60" cy="40" r="1.6" fill="#fff"/><circle cx="150" cy="24" r="1.4" fill="#fff"/><circle cx="240" cy="52" r="1.4" fill="#fff"/>
+              <rect y="210" width="400" height="50" fill="#3f7f5a"/>
+              <ellipse cx="312" cy="208" rx="100" ry="30" fill="#6fd0e8" stroke="#bfeeff" stroke-width="3"/>
+              <use href="#kapi-mahkota" x="252" y="122" width="128" height="89"/>
+              <ellipse cx="316" cy="204" rx="56" ry="13" fill="#6fd0e8" opacity=".92"/>
+              <g stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".6">
+                <line x1="2" y1="140" x2="30" y2="140"/><line x1="0" y1="170" x2="26" y2="170"/><line x1="4" y1="200" x2="28" y2="200"/>
+              </g>
+              <use href="#pangeran-ngos" x="34" y="98" width="88" height="143"/>
+              <!-- buket layu -->
+              <g stroke="#4a9a4a" stroke-width="3" stroke-linecap="round">
+                <line x1="108" y1="202" x2="102" y2="168"/><line x1="108" y1="202" x2="114" y2="166"/><line x1="108" y1="202" x2="126" y2="174"/>
+              </g>
+              <circle cx="102" cy="166" r="4" fill="#c9a0a0"/><circle cx="114" cy="164" r="3" fill="#d8b4a0"/>
+              <text x="124" y="176" font-size="18">🥀</text>
+              <text x="48" y="196" font-size="34">🐑</text>
+              <text x="104" y="112" font-size="20">💦</text>
+            </svg>
+            <div class="gelembung kiri">Putri! Maaf aku terlambat! Putri...?</div>
+            <div class="gelembung kanan pikir">...</div>
+          </div>
+          <p class="narasi">Menjelang subuh, Pangeran Arka berlari masuk dengan rambut berantakan dan buket bunga layu. Ternyata keretanya terjebak banjir, rodanya patah, dan dia berlari sambil menggendong domba yang tersesat. “Putri! Maaf aku terlambat! Putri?” Yang dia temukan hanya kapibara bermahkota di kolam.</p>
+        </article>
+
+        <!-- HALAMAN 7 -->
+        <article class="halaman">
+          <div class="kop"><span class="no">Halaman 7</span><h2>Pangeran Curhat ke Kapibara</h2></div>
+          <div class="panel">
+            <svg viewBox="0 0 400 260" role="img" aria-label="Pangeran menangis kecil sambil curhat, kapibara menyandarkan kepala ke lengannya">
+              <rect width="400" height="260" fill="url(#gSubuh2)"/>
+              <circle cx="330" cy="70" r="26" fill="#fff3b0" opacity=".8"/>
+              <ellipse cx="250" cy="226" rx="170" ry="38" fill="#6fd0e8" stroke="#bfeeff" stroke-width="3"/>
+              <g transform="translate(330 128) scale(-1 1)"><use href="#kapi-mahkota" width="150" height="104"/></g>
+              <ellipse cx="262" cy="222" rx="74" ry="16" fill="#6fd0e8" opacity=".92"/>
+              <use href="#pangeran-nangis" x="100" y="98" width="84" height="136"/>
+              <rect x="0" y="206" width="188" height="54" rx="6" fill="#b6a4c8"/>
+              <path d="M0 224 H188 M60 206 V260 M124 206 V260" stroke="#9c88b4" stroke-width="2"/>
+              <g font-size="20"><text x="236" y="112">💗</text><text x="268" y="98">💗</text></g>
+              <text x="78" y="148" font-size="16">💧</text>
+            </svg>
+            <div class="gelembung kiri">Aku sudah janji, tapi gagal... hiks 😭</div>
+            <div class="gelembung kanan pikir">Aku sudah tidak marah, kok 🥹</div>
+          </div>
+          <p class="narasi">Pangeran duduk di tepi kolam dan menceritakan semuanya pada kapibara, sambil terisak dan mengira itu hanya hewan peliharaan. “Aku sudah janji, tapi aku gagal. Putri pasti marah sekali.” Kapibara diam mendengarkan, lalu menyodorkan hidung basahnya ke tangan pangeran. Putri sudah tidak marah lagi. Dia justru terharu melihat betapa kerasnya usaha pangeran.</p>
+        </article>
+
+        <!-- HALAMAN 8 -->
+        <article class="halaman">
+          <div class="kop"><span class="no">Halaman 8</span><h2>Matahari Terbit, Sihir Hilang</h2></div>
+          <div class="panel">
+            <svg viewBox="0 0 400 260" role="img" aria-label="Putri, pangeran, penyihir, dan hewan-hewan sarapan bersama di tepi kolam saat matahari terbit">
+              <rect width="400" height="260" fill="url(#gPagi)"/>
+              <g stroke="#ffd54a" stroke-width="6" stroke-linecap="round">
+                <line x1="146" y1="135" x2="128" y2="135"/><line x1="162" y1="97" x2="149" y2="84"/><line x1="200" y1="81" x2="200" y2="63"/>
+                <line x1="238" y1="97" x2="251" y2="84"/><line x1="254" y1="135" x2="272" y2="135"/>
+              </g>
+              <circle cx="200" cy="135" r="44" fill="#ffd54a"/>
+              <ellipse cx="200" cy="250" rx="280" ry="110" fill="#8fd694"/>
+              <ellipse cx="205" cy="200" rx="128" ry="34" fill="#6fd0e8" stroke="#bfeeff" stroke-width="3"/>
+              <use href="#putri-senyum" x="160" y="92" width="84" height="136"/>
+              <ellipse cx="202" cy="204" rx="110" ry="26" fill="#6fd0e8" opacity=".93"/>
+              <use href="#pangeran-tawa" x="22" y="104" width="76" height="123"/>
+              <use href="#penyihir-malu" x="302" y="104" width="72" height="102"/>
+              <text x="284" y="198" font-size="32">🍰</text>
+              <text x="210" y="100" font-size="20">🐦</text>
+              <text x="104" y="214" font-size="22">🦆</text>
+              <text x="300" y="220" font-size="18">🐸</text>
+              <!-- tikar sarapan -->
+              <rect x="40" y="232" width="320" height="24" rx="5" fill="#fff" stroke="#ff8fb1" stroke-width="3"/>
+              <path d="M80 232 V256 M120 232 V256 M160 232 V256 M200 232 V256 M240 232 V256 M280 232 V256 M320 232 V256" stroke="#ffd1e0" stroke-width="3"/>
+              <g font-size="20"><text x="60" y="253">🥞</text><text x="130" y="253">☕</text><text x="196" y="253">🍉</text><text x="262" y="253">🍊</text><text x="322" y="253">🐇</text></g>
+              <text x="14" y="250" font-size="22">🐑</text>
+            </svg>
+            <div class="gelembung kiri">Jadi tadi aku curhat ke kamu?!</div>
+            <div class="gelembung kanan">Kalau telat lagi, aku jadi kapibara aja ya! 😌</div>
+          </div>
+          <p class="narasi">Sinar pagi menyentuh kolam, POOF! Putri kembali ke wujud manusia, masih berendam dan masih bermahkota miring. Pangeran melongo, lalu keduanya tertawa. “Jadi tadi aku curhat ke kamu?!” Penyihir Bubu muncul dengan malu-malu membawa kue permintaan maaf. Mereka sarapan bersama, dan sejak itu Putri selalu berkata, “Kalau pangeran telat lagi, aku jadi kapibara lagi saja ya, tenang sekali!”</p>
+        </article>
+
+      </div>
+
+      <nav class="navigasi">
+        <button class="nav-btn" id="btnPrev" aria-label="Halaman sebelumnya">◀</button>
+        <div class="dots" id="dots"></div>
+        <button class="nav-btn" id="btnNext" aria-label="Halaman berikutnya">▶</button>
+        <button class="tombol buka" id="btnBuka" hidden>Buka Surat Maafnya 💌</button>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hati yang melayang -->
+  <div class="hati-bg" id="hatiBg" aria-hidden="true"></div>
+
+  <!-- Tombol musik -->
+  <button class="musik-btn" id="btnMusik" aria-label="Nyalakan atau matikan musik">🎵</button>
+
+  <!-- ============ HALAMAN UTAMA ============ -->
+  <main>
+
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-emoji goyang">🐻💗🐰</div>
+      <p class="kecil">untuk <span class="nama-dia">Sayang</span> tersayang</p>
+      <h1>Maaf ya... 🥺👉👈</h1>
+      <p class="sub">Dari <span class="nama-ku">Pangeranmu</span> yang lagi nyesel banget</p>
+      <a href="#surat" class="tombol">Baca dulu yaa ↓</a>
+    </header>
+
+    <!-- SURAT -->
+    <section id="surat" class="bagian">
+      <h2>💌 Surat Kecil dariku</h2>
+      <div class="surat kartu reveal">
+        <p class="halo">Halo <span class="nama-dia">Sayang</span> yang paling aku sayang,</p>
+
+        <!-- ▼▼▼ GANTI KALIMAT DI BAWAH INI DENGAN KALIMAT BUATANMU ▼▼▼ -->
+        <p>Dear byy... </p>
+        <p>Kmu ingat waktu pertama kali kita ketemu,</p>
+        <p>waktu kita nonton film horor bareng.. </p>
+        <p>yang dimana saat itu kupikir mungkin kmu akan sama seperti</p>
+        <p>wanita-wanita yang pernah kutemui sebelumnya.. </p>
+        <p>namun ternyata aku salah,</p>
+        <p>kmu malahan membuat perasaan itu tumbuh lagi,</p>
+        <p>yang kupikir kapan yahh perasaan itu akan muncul lagi..</p>
+        <p>perasaan akan disayangi, dicintai, dihormati, dihargai byy..</p>
+        <p>hmmm....</p>
+        <p>Terimakasih byy kmu sudah ada didunia inii,</p>
+        <p>Terimakasih kmu mauu menemui ku dari awal kita nonton film bareng kemarin,,</p>
+        <p>Terimakasih kmu mau menerima semua kekurangan dan kelebihan ku</p>
+        <p>Terimakasih sudah mau tetap bersama dan menemani ku mulai hari ini hingga nanti..</p>
+        <p>Terimakasih sudah mau menerima semua kesalahan ku,</p>
+        <p>ahh-aku sekali lagi ingin mintaa maaf sudah membuat kmu marah, kecewa,</p>
+        <p>sedih, dan mungkin sampai kmu menangis tersedu-sedu atas kejadian sebelumnya...</p>
+        <p>aku, Rafi, akan berjanji akan selalu menemani, membersamai, menghargai, </p>
+        <p>mendukung semua pilihan dan rencana baik yang akan kmu lakukan hingga akhir memisahkan kita byy..</p>
+        <p>byy, Rafi Love Byy So Much 🫶🏼💞💞🤗
+        <!-- ▲▲▲ SAMPAI SINI ▲▲▲ -->
+
+        <p class="ttd">Dengan penuh cinta,<br><b class="nama-ku">Pangeranmu</b> 🤴💕</p>
+      </div>
+    </section>
+
+    <!-- GALERI FOTO -->
+    <section id="galeri" class="bagian">
+      <h2>📸 Kenangan Kita</h2>
+      <p class="intro reveal">Karena setiap foto ini bikin aku makin sadar, kamu itu berharga banget buatku.</p>
+
+      <div class="galeri">
+        <!-- Taruh foto di folder "foto" dengan nama foto1.jpg s/d foto6.jpg
+             Ganti tulisan di <figcaption> sesuai ceritamu. Mau nambah foto? Salin satu blok <figure>. -->
+        <figure class="polaroid reveal p1">
+          <img src="foto/foto1.jpeg" alt="Foto kita 1">
+          <figcaption>Awal kita ketemu 🥰</figcaption>
+        </figure>
+        <figure class="polaroid reveal p2">
+          <img src="foto/foto2.jpeg" alt="Foto kita 2">
+          <figcaption>Kamu lucu banget di sini 😆</figcaption>
+        </figure>
+        <figure class="polaroid reveal p3">
+          <img src="foto/foto3.jpeg" alt="Foto kita 3">
+          <figcaption>Hari paling seru ✨</figcaption>
+        </figure>
+        <figure class="polaroid reveal p4">
+          <img src="foto/foto4.jpeg" alt="Foto kita 4">
+          <figcaption>Senyum kamu favoritku 😊</figcaption>
+        </figure>
+        <figure class="polaroid reveal p5">
+          <img src="foto/foto5.jpeg" alt="Foto kita 5">
+          <figcaption>Berdua selalu 💑</figcaption>
+        </figure>
+        <figure class="polaroid reveal p6">
+          <img src="foto/foto6.jpeg" alt="Foto kita 6">
+          <figcaption>Mau bikin kenangan lagi 💖</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- JANJI -->
+    <section id="janji" class="bagian">
+      <h2>🤞 Janji Sang Pangeran</h2>
+      <ul class="janji reveal">
+        <!-- Ganti janji sesuai keinginanmu -->
+        <li><label><input type="checkbox"><span>Lebih perhatian dan dengerin kamu</span></label></li>
+        <li><label><input type="checkbox"><span>Gak bikin kamu sedih dan sakithati lagi (usahakan banget!)</span></label></li>
+        <li><label><input type="checkbox"><span>Traktir kamu jajanan favorit 🍜🧋</span></label></li>
+        <li><label><input type="checkbox"><span>Peluk kamu yang lama 🫂😋</span></label></li>
+      </ul>
+      <p class="catatan reveal">(Centang semua kalau kamu setuju ya 😚)</p>
+    </section>
+
+    <!-- TOMBOL MAAF -->
+    <section id="tanya" class="bagian tanya">
+      <h2>Jadi... maafin aku gak? 🥺</h2>
+      <div class="arena" id="arena">
+        <button class="tombol ya" id="btnYa">Iya, aku maafin 💖</button>
+        <button class="tombol tidak" id="btnTidak">Gak mau 😤</button>
+      </div>
+
+      <div class="hasil" id="hasil" hidden>
+        <div class="hasil-emoji">🥳🎉🐻💞</div>
+        <h3>YEAYYY!! Makasih ya, <span class="nama-dia">Sayang</span>! 🥹</h3>
+        <p>Aku janji bakal jadi lebih baik lagi. Aku sayang kamu banyak-banyak!</p>
+        <p class="ttd"><b class="nama-ku">Pangeranmu</b> 🤴💕</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>Dibuat dengan 💖 dan penuh penyesalan oleh <span class="nama-ku">Pangeranmu</span></p>
+    </footer>
+  </main>
+
+  <script>
+    /* ======= PENGATURAN: ganti nama di sini ======= */
+    const CONFIG = {
+      namaDia: "Sayang",        // nama/panggilan pasanganmu
+      namaKu:  "Pangeranmu"     // nama/panggilan kamu
+    };
+
+    document.querySelectorAll('.nama-dia').forEach(e => e.textContent = CONFIG.namaDia);
+    document.querySelectorAll('.nama-ku').forEach(e => e.textContent = CONFIG.namaKu);
+
+    /* ======= MUSIK ======= */
+    const musik = document.getElementById('musik');
+    const btnMusik = document.getElementById('btnMusik');
+    function mainkan() { musik.play().then(() => btnMusik.classList.add('nyala')).catch(() => {}); }
+    btnMusik.addEventListener('click', () => {
+      if (musik.paused) { mainkan(); btnMusik.textContent = '🎵'; }
+      else { musik.pause(); btnMusik.classList.remove('nyala'); btnMusik.textContent = '🔇'; }
+    });
+
+    /* ======= CERITA BERGAMBAR ======= */
+    const cerita = document.getElementById('cerita');
+    const halaman = [...document.querySelectorAll('.halaman')];
+    const lembar = document.getElementById('lembar');
+    const dotsEl = document.getElementById('dots');
+    const btnPrev = document.getElementById('btnPrev');
+    const btnNext = document.getElementById('btnNext');
+    const btnBuka = document.getElementById('btnBuka');
+    let idx = 0;
+
+    halaman.forEach(() => {
+      const d = document.createElement('span');
+      d.className = 'dot';
+      dotsEl.appendChild(d);
+    });
+
+    function tampil(n) {
+      n = Math.max(0, Math.min(halaman.length - 1, n));
+      halaman[idx].classList.remove('aktif');
+      idx = n;
+      halaman[idx].classList.add('aktif');
+      halaman[idx].scrollTop = 0;
+      [...dotsEl.children].forEach((d, i) => d.classList.toggle('aktif', i === idx));
+      btnPrev.style.visibility = idx === 0 ? 'hidden' : 'visible';
+      const akhir = idx === halaman.length - 1;
+      btnNext.hidden = akhir;
+      dotsEl.hidden = akhir;
+      btnBuka.hidden = !akhir;
+    }
+    function lanjut() { if (idx === 0) mainkan(); tampil(idx + 1); }
+    function tutupCerita() {
+      cerita.classList.add('tutup');
+      document.body.classList.remove('kunci');
+      mainkan();
+      window.scrollTo(0, 0);
+    }
+    btnNext.addEventListener('click', lanjut);
+    btnPrev.addEventListener('click', () => tampil(idx - 1));
+    document.getElementById('btnMulai').addEventListener('click', lanjut);
+    btnBuka.addEventListener('click', tutupCerita);
+    document.getElementById('btnLewati').addEventListener('click', tutupCerita);
+
+    // geser jari untuk ganti halaman
+    let sx = 0, sy = 0;
+    lembar.addEventListener('touchstart', e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+    lembar.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - sx;
+      const dy = e.changedTouches[0].clientY - sy;
+      if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+        if (dx < 0) { if (idx < halaman.length - 1) lanjut(); } else tampil(idx - 1);
+      }
+    }, { passive: true });
+    document.addEventListener('keydown', e => {
+      if (cerita.classList.contains('tutup')) return;
+      if (e.key === 'ArrowRight' && idx < halaman.length - 1) lanjut();
+      if (e.key === 'ArrowLeft') tampil(idx - 1);
+    });
+    tampil(0);
+
+    
+/* ======= HATI MELAYANG ======= */
+    const hatiBg = document.getElementById('hatiBg');
+    const daftarHati = ['💖','💗','💕','🌸','✨','🍓','🦋'];
+    setInterval(() => {
+      const h = document.createElement('span');
+      h.textContent = daftarHati[Math.floor(Math.random() * daftarHati.length)];
+      h.style.left = Math.random() * 100 + 'vw';
+      h.style.fontSize = (14 + Math.random() * 22) + 'px';
+      h.style.animationDuration = (6 + Math.random() * 6) + 's';
+      hatiBg.appendChild(h);
+      setTimeout(() => h.remove(), 12000);
+    }, 700);
+
+    /* ======= MUNCUL SAAT SCROLL ======= */
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('tampil'); io.unobserve(e.target); }
+    }), { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    /* ======= FOTO BELUM ADA -> TAMPILKAN PLACEHOLDER LUCU ======= */
+    document.querySelectorAll('.polaroid img').forEach(img => {
+      const cek = () => img.parentElement.classList.add('kosong');
+      img.addEventListener('error', cek);
+      if (img.complete && img.naturalWidth === 0) cek();
+    });
+
+    /* ======= TOMBOL MAAF ======= */
+    const arena = document.getElementById('arena');
+    const btnYa = document.getElementById('btnYa');
+    const btnTidak = document.getElementById('btnTidak');
+    const hasil = document.getElementById('hasil');
+    const kataTidak = ['Gak mau 😤','Yakin? 🥺','Beneran? 😭','Please... 🙏','Jangan gitu dong 💔','Aku sedih nih 😿','Klik yang satunya aja 👉'];
+    let coba = 0;
+
+    function kabur(e) {
+      e.preventDefault();
+      coba++;
+      const a = arena.getBoundingClientRect();
+      const maxX = Math.max(0, a.width - btnTidak.offsetWidth);
+      const maxY = Math.max(0, a.height - btnTidak.offsetHeight);
+      btnTidak.style.position = 'absolute';
+      btnTidak.style.left = Math.random() * maxX + 'px';
+      btnTidak.style.top = Math.random() * maxY + 'px';
+      btnTidak.textContent = kataTidak[Math.min(coba, kataTidak.length - 1)];
+      btnYa.style.transform = 'scale(' + Math.min(1 + coba * 0.1, 1.7) + ')';
+    }
+    btnTidak.addEventListener('mouseenter', kabur);
+    btnTidak.addEventListener('touchstart', kabur, { passive: false });
+    btnTidak.addEventListener('click', kabur);
+
+    btnYa.addEventListener('click', () => {
+      arena.hidden = true;
+      hasil.hidden = false;
+      konfeti();
+      hasil.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+
+    function konfeti() {
+      const warna = ['🎉','💖','✨','🌈','🎊','💕','🍭','⭐'];
+      for (let i = 0; i < 60; i++) {
+        const k = document.createElement('span');
+        k.className = 'konfeti';
+        k.textContent = warna[Math.floor(Math.random() * warna.length)];
+        k.style.left = Math.random() * 100 + 'vw';
+        k.style.animationDelay = Math.random() * 1.5 + 's';
+        k.style.fontSize = (18 + Math.random() * 20) + 'px';
+        document.body.appendChild(k);
+        setTimeout(() => k.remove(), 6000);
+      }
+    }
+  </script>
+</body>
+</html>
